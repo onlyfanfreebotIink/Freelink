@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ad Page</title>
+        <style>
+            body, html {
+                      margin: 0;
+                            padding: 0;
+                                  width: 100%;
+                                        height: 100%;
+                                              font-family: Arial, sans-serif;
+                                                    background-color: #f4f4f4;
+                                                          overflow: hidden;
+            }
+                #ad-overlay {
+                          position: fixed;
+                                top: 0;
+                                      left: 0;
+                                            width: 100%;
+                                                  height: 100%;
+                                                        background-color: rgba(0, 0, 0, 0.95);
+                                                              display: flex;
+                                                                    justify-content: center;
+                                                                          align-items: center;
+                                                                                flex-direction: column;
+                                                                                      color: #fff;
+                                                                                            z-index: 1000;
+                }
+                    #ad {
+                              width: 90%;
+                                    max-width: 800px;
+                                          height: 50%;
+                                                background-color: #000;
+                                                      display: flex;
+                                                            justify-content: center;
+                                                                  align-items: center;
+                                                                        text-align: center;
+                                                                              font-size: 1.5em;
+                                                                                    border-radius: 10px;
+                                                                                          overflow: hidden;
+                    }
+                        #skip-button {
+                                  position: absolute;
+                                        bottom: 20px;
+                                              right: 20px;
+                                                    padding: 5px 10px;
+                                                          font-size: 0.9em;
+                                                                background-color: #007BFF;
+                                                                      color: #fff;
+                                                                            border: none;
+                                                                                  border-radius: 3px;
+                                                                                        cursor: pointer;
+                                                                                              display: none;
+                                                                                                    z-index: 1100;
+                        }
+                            #skip-button:hover {
+                                      background-color: #0056b3;
+                            }
+                                #timer {
+                                          margin-top: 20px;
+                                                font-size: 1em;
+                                }
+                                  </style>
+                                  </head>
+                                  <body>
+                                    <!-- Quảng cáo -->
+                                      <div id="ad-overlay">
+                                          <div id="ad">
+                                                <p>Your Ad Here (Replace with your ad code)</p>
+                                                    </div>
+                                                        <button id="skip-button" onclick="redirect()">Skip Ad</button>
+                                                            <p id="timer">Ad ends in: <span id="countdown">60</span> seconds</p>
+                                                              </div>
+
+                                                                <script>
+                                                                    // Biến đếm ngược và logic quảng cáo
+                                                                        let countdown = 60;
+                                                                            const countdownElement = document.getElementById('countdown');
+                                                                                const skipButton = document.getElementById('skip-button');
+
+                                                                                    // Cập nhật thời gian đếm ngược
+                                                                                        const timer = setInterval(() => {
+                                                                                                  countdown--;
+                                                                                                        countdownElement.textContent = countdown;
+
+                                                                                                              // Hiển thị nút "Skip Ad" sau 30 giây
+                                                                                                                    if (countdown === 30) {
+                                                                                                                                skipButton.style.display = 'block';
+                                                                                                                    }
+
+                                                                                                                          // Hết 60 giây tự động kích hoạt nút "Skip Ad"
+                                                                                                                                if (countdown <= 0) {
+                                                                                                                                            clearInterval(timer);
+                                                                                                                                                    redirect();
+                                                                                                                                }
+                                                                                        }, 1000);
+
+                                                                                            // Hàm chuyển hướng
+                                                                                                function redirect() {
+                                                                                                          window.location.href = "https://t.me/PAWSOG_bot/PAWS?startapp=WZWswyx2";
+                                                                                                }
+
+                                                                                                    // Đảm bảo quảng cáo luôn hiển thị khi tải lại
+                                                                                                        window.onload = () => {
+                                                                                                                  document.getElementById('ad-overlay').style.display = 'flex';
+                                                                                                        };
+                                                                                                          </script>
+                                                                                                          </body>
+                                                                                                          </html>
+                                                                                                        }
+                                                                                                }
+                                                                                                                                }
+                                                                                                                    }
+                                                                                        })
+                                }
+                            }
+                        }
+                    }
+                }
+            }
